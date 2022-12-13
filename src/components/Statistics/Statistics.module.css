@@ -1,0 +1,22 @@
+.statistics {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.statistics__title {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.statistics__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.statistics__item {
+  display: inline-flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

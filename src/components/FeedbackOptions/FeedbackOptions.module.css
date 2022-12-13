@@ -1,0 +1,10 @@
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+button {
+  text-transform: capitalize;
+}
+button:hover {
+  background-color: rgb(83, 161, 238);
+}
