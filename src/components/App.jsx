@@ -9,14 +9,22 @@ export default function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const handleClickGood = () => {
-    setGood(state => state + 1);
-  };
-  const handleClickNeutral = () => {
-    setNeutral(state => state + 1);
-  };
-  const handleClickBad = () => {
-    setBad(state => state + 1);
+  const handleClickBtn = event => {
+    const { name } = event.target;
+    switch (name) {
+      case 'good':
+        setGood(state => state + 1);
+        break;
+      case 'neutral':
+        setNeutral(state => state + 1);
+        break;
+      case 'bad':
+        setBad(state => state + 1);
+        break;
+
+      default:
+        return;
+    }
   };
 
   const countTotalFeedback = good + neutral + bad;
@@ -29,9 +37,8 @@ export default function App() {
       <Section title="Please leave feedback">
         <b>Please leave feedback</b>
         <FeedbackOptions
-          onLeaveFeedbackGood={handleClickGood}
-          onLeaveFeedbackNeutral={handleClickNeutral}
-          onLeaveFeedbackBad={handleClickBad}
+          onLeaveFeedback={handleClickBtn}
+          options={[good, neutral, bad]}
         />
       </Section>
 
