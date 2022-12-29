@@ -38,7 +38,7 @@ export default function App() {
         <b>Please leave feedback</b>
         <FeedbackOptions
           onLeaveFeedback={handleClickBtn}
-          options={[good, neutral, bad]}
+          options={['good', 'neutral', 'bad']}
         />
       </Section>
 
